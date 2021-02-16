@@ -8,7 +8,6 @@ window.onload = function () {
         "markerFound",
         function () {
           vid.play();
-          vid.muted = false;
         }.bind(this)
       );
 
@@ -16,7 +15,6 @@ window.onload = function () {
         "markerLost",
         function () {
           vid.pause();
-          vid.muted = true;
           vid.currentTime = 0;
         }.bind(this)
       );
