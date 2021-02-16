@@ -68,12 +68,15 @@
           width="1360"
           height="888"
           scale="0.15 0.15 0.15"
-          position="85 -50 -120"
+          position="85 0 -125"
           rotation="-90 0 0"
         ></a-video>
         <!-- 
-          position="100 0 0"
-          rotation="-90 0 0"
+          positionの位置の設定方法
+          rotation.x = -90 で回転しているため、
+          position.z は本来奥行きだが、
+          動画が回転しているため画面の上下方向の値になる
+          なので、position.yが奥行き方向になる
         -->
       </a-nft>
       <a-entity camera></a-entity>
