@@ -4,6 +4,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
     <script src="./js/ar.js"></script>
     <style>
       .arjs-loader {
@@ -37,8 +38,9 @@
       arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
     >
       <a-assets>
+        <!-- https://jolly-fermat-1ec4ac.netlify.app/video.mp4 -->
         <video
-          src="https://jolly-fermat-1ec4ac.netlify.app/video.mp4"
+          src="https://jolly-fermat-1ec4ac.netlify.app/chromakey.mp4"
           preload="auto"
           id="vid"
           response-type="arraybuffer"
@@ -64,6 +66,7 @@
        -->
         <a-video
           src="#vid"
+          material="shader: chromakey; color: 0.1 0.9 0.2"
           cursor-listener
           width="1360"
           height="888"
