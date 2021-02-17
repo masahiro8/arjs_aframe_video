@@ -68,7 +68,7 @@
           クローマキーで抜く場合(動画再生されなくなるっぽい)
          material="shader: chromakey; color: 0.1 0.9 0.2"
         -->
-        <!-- <a-video
+        <a-video
           src="#vid"
           cursor-listener
           width="1360"
@@ -76,7 +76,7 @@
           scale="0.13 0.13 0.13"
           position="85 0 -125"
           rotation="-90 0 0"
-        ></a-video> -->
+        ></a-video>
         <!-- 
           positionの位置の設定方法
           rotation.x = -90 で回転しているため、
@@ -84,11 +84,11 @@
           動画が回転しているため画面の上下方向の値になる
           なので、position.yが奥行き方向になる
         -->
-        <!-- entityでやってみる -->
-        <a-entity
+        <!--サンプルコード通り entityでやってみる > ダメだった -->
+        <!-- <a-entity
           material="shader: chromakey; src: #vid; color: 0.1 0.9 0.2"
           geometry="primitive: box"
-        ></a-entity>
+        ></a-entity> -->
       </a-nft>
       <a-entity camera></a-entity>
     </a-scene>
