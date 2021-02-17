@@ -4,7 +4,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
+    <!-- <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script> -->
     <script src="./js/ar.js"></script>
     <style>
       .arjs-loader {
@@ -68,7 +68,7 @@
           クローマキーで抜く場合(動画再生されなくなるっぽい)
          material="shader: chromakey; color: 0.1 0.9 0.2"
         -->
-        <a-video
+        <!-- <a-video
           src="#vid"
           cursor-listener
           width="1360"
@@ -76,7 +76,7 @@
           scale="0.13 0.13 0.13"
           position="85 0 -125"
           rotation="-90 0 0"
-        ></a-video>
+        ></a-video> -->
         <!-- 
           positionの位置の設定方法
           rotation.x = -90 で回転しているため、
@@ -84,6 +84,11 @@
           動画が回転しているため画面の上下方向の値になる
           なので、position.yが奥行き方向になる
         -->
+        <!-- entityでやってみる -->
+        <a-entity
+          material="shader: chromakey; src: #vid; color: 0.1 0.9 0.2"
+          geometry="primitive: box"
+        ></a-entity>
       </a-nft>
       <a-entity camera></a-entity>
     </a-scene>

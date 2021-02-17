@@ -1,12 +1,11 @@
 window.onload = function () {
   AFRAME.registerComponent("videohandler", {
     init: function () {
-      const vid = document.querySelector("#vid");
       const marker = this.el;
-
       marker.addEventListener(
         "markerFound",
         function () {
+          const vid = document.querySelector("#vid");
           vid.play();
         }.bind(this)
       );
@@ -14,6 +13,7 @@ window.onload = function () {
       marker.addEventListener(
         "markerLost",
         function () {
+          const vid = document.querySelector("#vid");
           vid.pause();
           vid.currentTime = 0;
         }.bind(this)
